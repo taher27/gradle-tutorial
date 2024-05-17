@@ -67,6 +67,8 @@ ROOST_METHOD_SIG_HASH=addTwoNumbers_da7966707b
     This assertion verifies that the method correctly adds two small numbers. This test is important to ensure that the method can handle small numbers without underflow.
 
 roost_feedback [5/17/2024, 5:46:02 PM]:comment or remove unwanted code. 
+
+roost_feedback [5/17/2024, 6:47:08 PM]:update the comments or remove unwanted code
 */
 
 // ********RoostGPT********
@@ -74,7 +76,6 @@ roost_feedback [5/17/2024, 5:46:02 PM]:comment or remove unwanted code.
 package com.tomgregory;
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class GradleTutorialAddTwoNumbersTest {
