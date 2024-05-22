@@ -69,6 +69,7 @@ ROOST_METHOD_SIG_HASH=addTwoNumbers_da7966707b
 */
 
 // ********RoostGPT********
+
 package com.tomgregory;
 
 import org.junit.Test;
