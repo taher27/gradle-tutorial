@@ -69,3 +69,13 @@ ROOST_METHOD_SIG_HASH=addTwoNumbers_da7966707b
 */
 
 // ********RoostGPT********
+
+/*
+ * Prerequisite: Please ensure that JDK is installed and correctly configured in your environment variables.
+ * The error 'Could not find tools.jar' suggests that the JDK is not correctly installed or configured.
+ * The JRE alone does not contain the necessary tools for compiling Java code, which are included in the JDK.
+ */
+@Test
+public void yourTestCase() {
+  // Your test case code
+}
