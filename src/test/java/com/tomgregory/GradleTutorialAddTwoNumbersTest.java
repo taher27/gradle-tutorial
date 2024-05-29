@@ -55,43 +55,31 @@ Validation:
 */
 
 // ********RoostGPT********
+
 package com.tomgregory;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GradleTutorialAddTwoNumbersTest {
-    @Test
-    public void testAdditionOfPositiveNumbers() {
-        int a = 5;
-        int b = 10;
-        int expected = 15;
+    @ParameterizedTest
+    @MethodSource("additionProvider")
+    public void testAddition(int a, int b, int expected) {
         int result = addTwoNumbers(a, b);
         assertEquals(expected, result);
     }
-    @Test
-    public void testAdditionOfNegativeNumbers() {
-        int a = -5;
-        int b = -10;
-        int expected = -15;
-        int result = addTwoNumbers(a, b);
-        assertEquals(expected, result);
+
+    private static Stream<Object[]> additionProvider() {
+        return Stream.of(
+                new Object[]{5, 10, 15},
+                new Object[]{-5, -10, -15},
+                new Object[]{5, -10, -5},
+                new Object[]{0, 10, 10}
+        );
     }
-    @Test
-    public void testAdditionOfPositiveAndNegativeNumbers() {
-        int a = 5;
-        int b = -10;
-        int expected = -5;
-        int result = addTwoNumbers(a, b);
-        assertEquals(expected, result);
-    }
-    @Test
-    public void testAdditionOfZeroAndNumber() {
-        int a = 0;
-        int b = 10;
-        int expected = 10;
-        int result = addTwoNumbers(a, b);
-        assertEquals(expected, result);
-    }
+
     private int addTwoNumbers(int a, int b) {
         return a + b;
     }
